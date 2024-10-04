@@ -23,16 +23,22 @@ int main() {
   getline(std::cin, input_unstream);
   std::stringstream ss(input_unstream);
 
-  int* arr = new int [4];
-  int* q = &arr[3];
+  int* arr = new int [40];
+  int* q = &arr[0] - 1;
 
   while (getline(ss, input, ' ')) {
     if (input == "+" || input == "-" || input == "*" || input == "/") {
-      int result = calculate(*(q - 1), *(q), input);
+      int result = calculate(*(q - 1), *q, input);
       std::cout << result << std::endl;
+      q -= 1;
+      *q = result;
+      
     }else {
-      arr
+      q += 1;
+      *q = std::stoi(input);
     }
     
   }
+  std::cout << *q << '\n';
+  delete [] arr;
 }
