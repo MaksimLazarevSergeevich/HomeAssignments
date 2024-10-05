@@ -1,3 +1,6 @@
+/*Maksim Lazarev st128707@student.spbu.ru
+second tusk a*/
+
 #include <iostream>
 #include <fstream>
 #include <filesystem>
@@ -5,8 +8,8 @@
 
 int main() {
 
-  std::ifstream infile("test_1.bin", std::ios::binary);
-  int fileSize = std::filesystem::file_size("test_1.bin");
+  std::ifstream infile("input.txt", std::ios::binary);
+  int fileSize = std::filesystem::file_size("input.txt");
   std::cout << "Размер файла: " << fileSize << "\n";
 
   char* buffer = new char[fileSize];
