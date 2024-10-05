@@ -1,3 +1,6 @@
+/*Maksim Lazarev st128707@student.spbu.ru
+second tusk b*/
+
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -18,6 +21,8 @@ int calculate(int a, int b, std::string opers) {
 
 
 int main() {
+  std::cout << "Введите выражение в виде обратной польской записи через пробелы:" << '\n';
+
   std::string input;
   std::string input_unstream;
   getline(std::cin, input_unstream);
@@ -29,16 +34,13 @@ int main() {
   while (getline(ss, input, ' ')) {
     if (input == "+" || input == "-" || input == "*" || input == "/") {
       int result = calculate(*(q - 1), *q, input);
-      std::cout << result << std::endl;
       q -= 1;
       *q = result;
-      
     }else {
       q += 1;
       *q = std::stoi(input);
     }
-    
   }
-  std::cout << *q << '\n';
+  std::cout << "Ответ: " << *q << '\n';
   delete [] arr;
 }
