@@ -28,7 +28,7 @@ int main() {
   getline(std::cin, input_unstream);
   std::stringstream ss(input_unstream);
 
-  int* arr = new int [40];
+  int* arr = new int [50];
   int* q = &arr[0] - 1;
 
   while (getline(ss, input, ' ')) {
