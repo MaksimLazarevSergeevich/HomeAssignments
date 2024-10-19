@@ -3,22 +3,35 @@ first tusk*/
 
 #ifndef TRANSFORMER_H
 #define TRANSFORMER_H
-#include <iostream>
+#include "ironheart.h"
+#include "weapon.h"
 
 class Transformer {
 public:
-    Transformer(int = 0, int = 0, std::string = "None");
+    Transformer(int, int, std::string, unsigned int, unsigned int);
     void fire();
-    void set_ammo(int);
-    int get_ammo();
-    void set_level(int);
-    int get_level();
-    void set_mytransformer_name(std::string);
-    std::string get_mytransformer_name();
+    void setAmmo(int);
+    int getAmmo();
+    void setLevel(int);
+    int getLevel();
+    void setName(std::string);
+    std::string getName();
+    unsigned int getHeal();
+    void setHeal(unsigned int);
+    void setNameWeapon(Weapon*);
+    std::string getNameWeapon();
+    void levelUp();
+    bool ultimate();
+    unsigned int getRange();
+    void setRange(unsigned int);
+    ~Transformer();
 private:
     int _ammo;
     int _level;
-    std::string _mytransformer_name;
+    std::string _name;
+    unsigned int _range;
+    IronHeart _heal; /*Composition*/
+    Weapon* _nameWeapon = nullptr; /*Association*/
 };
 
 #endif

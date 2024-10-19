@@ -1,30 +1,31 @@
 #include "autobot.h"
-#include <iostream>
 
-Autobot::Autobot(int ammo, int level, std::string name, bool is_weapon): Transformer(ammo, level, name) {
-    _weapon_autobot = is_weapon;
-}
+Autobot::Autobot(int number, std::string autobotName, int ammo,
+ int level, std::string name, unsigned int heal, unsigned int range): Transformer(ammo, level, name, heal, range) {
+    _number = number;
+    _autobotName = autobotName;
+ }
 
-void Autobot::set_weapon_autobot(bool is_weapon) {
-    _weapon_autobot = is_weapon;
-}
-void Autobot::set_autobot(bool is_autobot) {
-    _autobot = is_autobot;
-}
-
-bool Autobot::ultra_punch() {
+ bool Autobot::transform() {
     return true;
-}
+ }
 
-bool Autobot::punch() {
+ bool Autobot::autobotAtack() {
     return true;
+ }
+
+void Autobot::setNumber(int number) {
+    _number = number;
 }
 
-bool Autobot::get_autobot() {
-    return _autobot;
+int Autobot::getNumber() {
+    return _number;
 }
 
-bool Autobot::get_weapon_autobot() {
-    return _weapon_autobot;
+void Autobot::setAutobotName(std::string autobotName) {
+    _autobotName = autobotName;
 }
 
+std::string Autobot::getAutobotName() {
+    return _autobotName;
+}

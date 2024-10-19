@@ -1,30 +1,31 @@
 #include "decepticon.h"
-#include <iostream>
 
-Decepticon::Decepticon(int ammo, int level, std::string name, bool is_weapon): Transformer(ammo, level, name) {
-    _weapon_decepticon = is_weapon;
-}
+Decepticon::Decepticon(int number, std::string decepticonName, int ammo,
+ int level, std::string name, unsigned int heal, unsigned int range): Transformer(ammo, level, name, heal, range) {
+    _number = number;
+    _decepticonName = decepticonName;
+ }
 
-bool Decepticon::get_weapon_decepticon() {
-    return _weapon_decepticon;
-} 
-
-bool Decepticon::get_decepticon() {
-    return _decepticon;
-}
-
-void Decepticon::set_decepticon(bool is_decepticon) {
-    _decepticon = is_decepticon;
-}
-
-void Decepticon::set_weapon_decepticon(bool is_weapon) {
-    _weapon_decepticon = is_weapon;
-}
-
-bool Decepticon::art_damage() {
+ bool Decepticon::transform() {
     return true;
+ }
+
+ bool Decepticon::decepticonAtack() {
+    return true;
+ }
+
+void Decepticon::setNumber(int number) {
+    _number = number;
 }
 
-bool Decepticon::ultra_art_damage() {
-    return true;
+int Decepticon::getNumber() {
+    return _number;
+}
+
+void Decepticon::setDecepticonName(std::string decepticonName) {
+    _decepticonName = decepticonName;
+}
+
+std::string Decepticon::getDecepticonName() {
+    return _decepticonName;
 }

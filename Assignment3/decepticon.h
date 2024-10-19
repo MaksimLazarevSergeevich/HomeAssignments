@@ -1,19 +1,18 @@
 #ifndef DECEPTICON_H
 #define DECEPTICON_H
 #include "transformer.h"
-#include <iostream>
-
 class Decepticon: public Transformer {
-private:
-    bool _weapon_decepticon;
-    bool _decepticon = true;
 public:
-    Decepticon(int = 0, int = 0, std::string = "None", bool = false);
-    bool get_weapon_decepticon();
-    bool get_decepticon();
-    void set_weapon_decepticon(bool);
-    void set_decepticon(bool);
-    bool art_damage();
-    bool ultra_art_damage();
+    Decepticon(int, std::string, int, int, std::string, unsigned int, unsigned int);
+    bool transform();
+    bool decepticonAtack();
+    void setNumber(int);
+    int getNumber();
+    void setDecepticonName(std::string);
+    std::string getDecepticonName();
+private:
+    int _number;
+    std::string _decepticonName;
 };
+
 #endif
