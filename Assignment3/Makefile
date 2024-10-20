@@ -20,7 +20,7 @@ DEPS=$(wildcard *.h)
 
 OBJ=transformer.o ironheart.o weapon.o autobot.o decepticon.o terminator.o
 
-TEST-OBJ=test-hello.o test-mock.o
+TEST-OBJ=test-transformer.o test-autobot.o test-terminator.o test-decepticon.o
 
 .PHONY: default
 

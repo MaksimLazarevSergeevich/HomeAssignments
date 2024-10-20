@@ -1,3 +1,5 @@
+/*Maksim Lazarev st128707@student.spbu.ru*/
+
 #ifndef TERMINATOR_H
 #define TERMINATOR_H
 #include "transformer.h"

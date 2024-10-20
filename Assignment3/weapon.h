@@ -1,3 +1,5 @@
+/*Maksim Lazarev st128707@student.spbu.ru*/
+
 #ifndef WEAPON_H
 #define WEAPON_H
 #include <iostream>

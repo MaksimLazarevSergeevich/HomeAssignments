@@ -1,5 +1,4 @@
-/*Maksim Lazarev st128707@student.spbu.ru
-first tusk*/
+/*Maksim Lazarev st128707@student.spbu.ru*/
 
 #ifndef TRANSFORMER_H
 #define TRANSFORMER_H

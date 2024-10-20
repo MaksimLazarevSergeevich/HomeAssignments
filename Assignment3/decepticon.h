@@ -1,6 +1,9 @@
+/*Maksim Lazarev st128707@student.spbu.ru*/
+
 #ifndef DECEPTICON_H
 #define DECEPTICON_H
 #include "transformer.h"
+
 class Decepticon: public Transformer {
 public:
     Decepticon(int, std::string, int, int, std::string, unsigned int, unsigned int);
