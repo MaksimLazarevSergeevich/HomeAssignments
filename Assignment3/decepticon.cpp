@@ -1,3 +1,5 @@
+/*Maksim Lazarev st128707@student.spbu.ru*/
+
 #include "decepticon.h"
 
 Decepticon::Decepticon(int number, std::string decepticonName, int ammo,

@@ -1,3 +1,5 @@
+/*Maksim Lazarev st128707@student.spbu.ru*/
+
 #include "autobot.h"
 
 Autobot::Autobot(int number, std::string autobotName, int ammo,

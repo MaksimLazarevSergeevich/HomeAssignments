@@ -1,3 +1,5 @@
+/*Maksim Lazarev st128707@student.spbu.ru*/
+
 #include "terminator.h"
 
 Terminator::Terminator(int number, std::string terminatorName, int ammo,

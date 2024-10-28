@@ -1,3 +1,5 @@
+/*Maksim Lazarev st128707@student.spbu.ru*/
+
 #include "transformer.h"
 
 Transformer::Transformer(int ammo, int level, std::string name, unsigned int heal, unsigned int range):
@@ -22,10 +24,7 @@ int Transformer::getAmmo() {
 
 void Transformer::fire() {
     if (_ammo > 0) {
-        std::cout << "Fired" << '\n';
         _ammo -= 1;
-    } else {
-        std::cout << "No ammo" << '\n';
     }
 }
 

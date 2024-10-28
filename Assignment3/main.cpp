@@ -1,6 +1,9 @@
+/*Maksim Lazarev st128707@student.spbu.ru*/
+
 #include "autobot.h"
 #include "decepticon.h"
 #include "terminator.h"
+#include <iostream>
 
 int main() {
     Transformer rm(1, 1, "Hello", 5, 10);
@@ -10,9 +13,7 @@ int main() {
     std::cout << rm.getHeal() << '\n';
     std::cout << rm.getAmmo() << '\n';
     Decepticon dec(1, "dec", 2, 5, "Hello", 3, 2);
-    dec.fire();
-    Autobot aut(1, "aut", 5, 3, "Hello", 4, 3);
-    aut.fire();
-    Terminator ter(1, "ter", 0, 0, "Hello", 1, 2);
-    ter.fire();
+    Weapon sword("Sword");
+    dec.setNameWeapon(&sword);
+    std::cout << dec.getNameWeapon() << '\n';
 }

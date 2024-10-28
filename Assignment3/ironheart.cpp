@@ -1,3 +1,5 @@
+/*Maksim Lazarev st128707@student.spbu.ru*/
+
 #include "ironheart.h"
 
 IronHeart::IronHeart(unsigned int healPoint) {
