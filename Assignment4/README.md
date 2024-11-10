@@ -4,7 +4,8 @@
 ## Contacts
 st128707@student.spbu.ru
 ## Description
-Assingnment3 - Transformer class hierarchy. In this class you can create a weapon name and pass it to the transformer. You can also assign and change the values of the transformer. There are also test files in this project that test some class functions.
+Assingnment4 - Transformer class hierarchy. In this class you can create a weapon name and pass it to the transformer. You can also assign and change the values of the transformer. There are also test files in this project that test some class functions.
+Now you can create transformers and compare their powers
 
 # Prerequisites
 sudo apt install build-essential
